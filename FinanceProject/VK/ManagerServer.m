@@ -12,6 +12,7 @@
 #import "UserVKModel.h"
 #import "AccessToken.h"
 #import "MapperUserVKModel.h"
+#import "PDKeychainBindings.h"
 
 
 @interface ManagerServer ()
@@ -48,27 +49,31 @@
     return self;
 }
 
-- (void)authorizeUserWirhQuery:(NSString *) query
-                      andBlock:(void (^)(NSArray *))completion
-                {
+- (void)authorizeUserWirhQuery:(PDKeychainCompletionBlock)completion {
     
     LoginViewController *vc = [[LoginViewController alloc] initWithCompletionBlock:^(AccessToken *token) {
         self.accessToken = token;
-        if (token) {
-         NSURLSessionDataTask* dich = [self searchVKWithRequest:query
-                    accessToken:self.accessToken.token
-                         userID:self.accessToken.userID
-                      onSuccess:^(NSError *error, NSArray *friends) {
-                          NSLog(@"%@",friends);
-                          completion(friends);
-                
-                       } onFail:^(NSError *error, NSInteger statusCode) {
-                                                         
-                       }];
-            
-        } else if (completion) {
-            completion(nil);
-        }
+//        if (token) {
+//         //NSURLSessionDataTask* dich =
+//            [self searchVKWithRequest:query
+//                    accessToken:self.accessToken.token
+//                         userID:self.accessToken.userID
+//                      onSuccess:^(NSError *error, NSArray *friends) {
+//                          NSLog(@"%@",friends);
+//                          completion(friends);
+//                
+//                       } onFail:^(NSError *error, NSInteger statusCode) {
+//                                                         
+//                       }];
+//            
+//        } else if (completion) {
+//            completion(nil);
+//        }
+        PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+        [bindings setObject:self.accessToken.userID forKey:@"userID"];
+        [bindings setObject:self.accessToken.token forKey:@"token"];
+        completion(nil, bindings);
+
     }];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -76,10 +81,9 @@
     
     [mainVC presentViewController:nav animated:YES completion:nil];
     
-    
-    
+        
 }
-- (NSURLSessionDataTask*)searchVKWithRequest:(NSString*)query
+- (void)searchVKWithRequest:(NSString*)query
                 accessToken:(NSString*)access_token
                      userID:(NSString*)userID
                   onSuccess:(UserListCompletionBlock) success
@@ -90,13 +94,18 @@
                                 userID,@"user_id",
                                 query,@"q",
                                 @"photo_50",@"fields", nil];
-    
-   return [self.sessionManager GET:@"friends.search"
+
+   [self.sessionManager GET:@"friends.search"
                   parameters:dictionary
+                          progress:^(NSProgress * _Nonnull downloadProgress) {
+                              
+                          }
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                         //NSLog(@"Json %@", responseObject);
+
                          [ManagerServer handleSuccessResponse:responseObject withCompletion:success];
+                         
                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         
                          NSLog(@"Fail %@", error);
                      }];
     
@@ -109,10 +118,12 @@
                 completionBlock {
     
     dispatch_async(dispatch_get_global_queue (DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
         MapperUserVKModel *mapper = [MapperUserVKModel new];
         NSMutableArray *friends = [@[] mutableCopy];
         NSArray *jsonArray = responceJson[@"response"];
         int i = 1;
+        
         NSLog(@"jsonnew %@",jsonArray);
        
         for (NSDictionary *friendsJson in jsonArray) {
@@ -131,25 +142,4 @@
     
 }
 
-//- (void)searchFrendsFromVKWithRequest:(NSString*)request
-//                               offset:(NSInteger)offset
-//                                count:(NSInteger)count
-//                            onSuccess:(void(^)(NSArray *friends)) success
-//                               onFail:(void(^)(NSError *error, NSInteger statusCode)) failure {
-//    
-//    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                @"13897921",@"user_id",
-//                                @(count),@"count",
-//                                @(offset),@"offset",
-//                                @"photo_50",@"fields", nil];
-//
-//    [self.sessionManager GET:@"friends.get"
-//                  parameters:dictionary
-//                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                      NSLog(@"Json %@", responseObject);
-//                  } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                      NSLog(@"Fail %@", error);
-//                  }];
-//
-//}
 @end

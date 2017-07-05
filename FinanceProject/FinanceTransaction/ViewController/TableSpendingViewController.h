@@ -14,4 +14,5 @@
 
 -(IBAction)didSelectSegment:(id)sender;
 @property (strong, nonatomic) IBOutlet UITableView *table;
+
 @end

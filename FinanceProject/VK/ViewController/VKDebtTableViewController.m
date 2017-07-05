@@ -16,7 +16,7 @@
 
 @interface VKDebtTableViewController ()
 
-@property (strong, nonatomic) NSArray<FriendVK*> *friends;
+@property (strong, nonatomic) NSMutableArray *friends;
 
 @end
 
@@ -24,20 +24,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSFetchRequest <FriendVK*> *fetchRequest = [FriendVK fetchRequest];
-    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    self.friends = [appDelegate.persistentContainer.viewContext
-                         executeFetchRequest:fetchRequest
-                         error:nil];
     
-    FriendVK *friend = [FriendVK new];
-    friend = self.friends[0];
-    NSLog(@"%@",friend.firstName);
-
     
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    NSFetchRequest <FriendVK*> *fetchRequest = [FriendVK fetchRequest];
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSArray *arr = [NSArray new];
+    arr = [appDelegate.persistentContainer.viewContext
+                    executeFetchRequest:fetchRequest
+                    error:nil];
+    self.friends = [[NSMutableArray alloc] initWithArray:arr];
+    
+    [self.table reloadData];
+}
+
 #pragma mark - UITableViewDataSource
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+ 
+            [context deleteObject:[self.friends objectAtIndex:indexPath.row]];
+            
+            NSError *error = nil;
+            if (![context save:&error]) {
+                NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+                return;
+            }
+
+            [self.friends removeObjectAtIndex:indexPath.row];
+            [self.table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.friends.count;

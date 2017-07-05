@@ -12,6 +12,8 @@
 
 @implementation VKDebtTableViewCell
 
+@synthesize imageView;
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -24,6 +26,7 @@
 
 - (void) setCellforVK:(FriendVK*)friend {
     
+    //self.name.accessibilityIdentifier = @"name";
     self.imageView.image = [UIImage imageNamed:@"1.png"];
     self.imageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
     self.imageView.layer.cornerRadius=25;

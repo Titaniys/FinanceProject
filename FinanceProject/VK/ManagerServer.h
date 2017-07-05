@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-
+#import "PDKeychainBindings.h"
 @class UserVKModel;
 
+typedef void (^PDKeychainCompletionBlock)(NSError *error, PDKeychainBindings *binding);
 typedef void (^UserListCompletionBlock)(NSError *error, NSArray *friends);
 typedef void (^UserDetailsCompletionBlock)(NSError *error, id users);
 
@@ -19,22 +20,15 @@ typedef void (^UserDetailsCompletionBlock)(NSError *error, id users);
 @property (strong, nonatomic, readonly) UserVKModel *currentUser;
 
 
-- (void)authorizeUserWirhQuery:(NSString *) query
-                      andBlock:(void (^)(NSArray *))completion;
+- (void)authorizeUserWirhQuery:(PDKeychainCompletionBlock) completion;
 
 + (ManagerServer *) sharedManager;
 
-//- (NSURLSessionDataTask*)searchFrendsFromVKWithRequest:(NSString*)request
-//                               offset:(NSInteger)offset
-//                                count:(NSInteger)count
-//                            onSuccess:(UserListCompletionBlock) success
-//                               onFail:(void(^)(NSError *error, NSInteger statusCode)) failure;
 
-
-- (NSURLSessionDataTask*)searchVKWithRequest:(NSString*)query
-                     userID:(NSInteger)userID
+- (void)searchVKWithRequest:(NSString*)query
+                accessToken:(NSString*)access_token
+                     userID:(NSString*)userID
                   onSuccess:(UserListCompletionBlock) success
                      onFail:(void(^)(NSError *error, NSInteger statusCode)) failure;
-
 
 @end

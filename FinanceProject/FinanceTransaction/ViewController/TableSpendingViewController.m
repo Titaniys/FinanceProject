@@ -31,17 +31,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.table reloadData];
     self.countReload ++;
-    NSLog(@"%ld",self.countReload);
     self.tableView.estimatedRowHeight = 40;
     self.tableView.sectionHeaderHeight = 35;
     
     [self.tableView registerNib:[CustomHeaderView nib] forHeaderFooterViewReuseIdentifier:@"Header"];
-    [self changeArrayTransaction];
-    
-
 }
+
+- (void) viewWillAppear:(BOOL)animated {
+    [self changeArrayTransaction];
+    [self.table reloadData];
+}
+
 
 - (void) changeArrayTransaction {
     
@@ -66,16 +67,10 @@
     }
     if (self.countReload == 1) {
         [self selectedArray:self.spandingArr];
-        NSLog(@"first ");
     }
-    NSLog(@"first ");
 
-}
-// плохо релоадит
-- (void)viewWillAppear:(BOOL)animated {
-    [self changeArrayTransaction];
-}
 
+} 
 
 - (void) selectedArray:(NSMutableArray*) array {
     ///
@@ -100,11 +95,10 @@
         [section.sectionWithMonth addObject:transact];
         
     }
-
 }
 
 - (IBAction)didSelectSegment:(id)sender {
-    
+
     if (!self.segmenControl.selectedSegmentIndex) {
         [self selectedArray:self.spandingArr];
     } else {
@@ -124,8 +118,6 @@
 
 
 
-
-
 #pragma mark - UITableViewDataSource UITableViewDelegate
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -133,7 +125,27 @@
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-        //NSManagedObjectContext *context = [NSManagedObjectContext alloc]
+    
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        SectionForTransactionOfMonth *section = [self.transactOfMonth objectAtIndex:indexPath.section];
+       
+        [context deleteObject:[section.sectionWithMonth objectAtIndex:indexPath.row]];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        
+        [section.sectionWithMonth removeObjectAtIndex:indexPath.row];
+        [self.table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    [self changeArrayTransaction];
+    [self.table reloadData];
+
 }
 
 

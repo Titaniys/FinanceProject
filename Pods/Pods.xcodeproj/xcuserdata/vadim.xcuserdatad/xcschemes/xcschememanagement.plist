@@ -8,25 +8,52 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>CorePlot.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>PDKeychainBindingsController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-FinanceProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-FinanceProjectTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2FBCC9B7A20B273BAEF501D2DF67B30E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>43D79FA333043F0892540179D197C1B3</key>
 		<dict>
 			<key>primary</key>
@@ -37,12 +64,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6CB75C5563C637DE2AFA50DB15ACB11</key>
+		<key>D1F5770971EF1438D325530EDFE98FE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF51505E9E71C9E3074D73DC5AD5E0AB</key>
+		<key>E1FE4511FCEC5442765EEC090CE6D196</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E20E8AB54D5CE260ABD62277985E0519</key>
 		<dict>
 			<key>primary</key>
 			<true/>

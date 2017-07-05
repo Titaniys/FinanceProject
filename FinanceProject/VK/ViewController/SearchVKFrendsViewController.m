@@ -11,18 +11,21 @@
 #import "ManagerServer.h"
 #import "AppDelegate.h"
 #import "FriendVK+CoreDataClass.h"
+#import "PDKeychainBindings.h"
+#import "AccessToken.h"
 
 
 
 @interface SearchVKFrendsViewController () <UISearchBarDelegate, UITextFieldDelegate>
 
+@property (strong, nonatomic) AccessToken *token;
 @property (assign, nonatomic) BOOL firstTimeAppear;
 @property (assign, nonatomic) NSInteger numberOfUser;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) NSMutableArray<UserVKModel*> *friends;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activInd;
 
 @end
 
@@ -30,11 +33,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.token = [AccessToken new];
     
     self.table.delegate = self;
     self.table.dataSource = self;
     self.searchBar.delegate = self;
-    
+    self.textField.delegate = self;
     self.firstTimeAppear = YES;
     self.friends =[NSMutableArray new];
                    
@@ -60,20 +64,32 @@
     }
     [self.friends removeAllObjects];
     [self.table reloadData];
-    
+    [self.activInd startAnimating];
     [searchBar resignFirstResponder];
     
-   // NSString * query = @"Ab";
-    
-    [[ManagerServer sharedManager]
-     authorizeUserWirhQuery:searchBar.text
-                   andBlock:^(NSArray * friends) {
-                       [self.friends removeAllObjects];
-                       [self.friends addObjectsFromArray:friends];
-                       [self.table reloadData];
+    [[ManagerServer sharedManager] authorizeUserWirhQuery:^(NSError *error, PDKeychainBindings *binding) {
+        AccessToken *token = [AccessToken new];
+        token.token = [binding objectForKey:@"token"];
+        token.userID = [binding objectForKey:@"userID"];
+
+        if (token.token) {
+            [[ManagerServer sharedManager] searchVKWithRequest:self.searchBar.text accessToken:token.token
+                     userID:token.userID
+                  onSuccess:^(NSError *error, NSArray *friends) {
+                     [self.friends removeAllObjects];
+                     [self.friends addObjectsFromArray:friends];
+                     [self.table reloadData];
+                     [self.activInd stopAnimating];
+                    } onFail:^(NSError *error, NSInteger statusCode) {
+                                                         
+                    }];
+        }
+
     }];
+
     
 }
+
 
 #pragma mark - UITableViewDataSource, Delegate
 
@@ -130,6 +146,33 @@
     friend.summ = self.textField.text;
 
     [appDelegate saveContext];
+    [self showAlert];
 
 }
+
+- (void)showAlert {
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Saved!"
+                                 message:@"Friend successfully saved"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"OK"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - UIGestureRecognize
+
+- (IBAction)didPinch:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

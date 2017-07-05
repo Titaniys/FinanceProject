@@ -1,0 +1,18 @@
+NameError: undefined local variable or method `button' for main:Object
+	from (irb):1
+	from /Users/vadim/.calabash/sandbox/Rubies/2.3.1/bin/irb:11:in `<main>'
+NameError: undefined local variable or method `d' for main:Object
+	from (irb):2
+	from /Users/vadim/.calabash/sandbox/Rubies/2.3.1/bin/irb:11:in `<main>'
+NameError: uninitialized constant E
+	from (irb):3
+	from /Users/vadim/.calabash/sandbox/Rubies/2.3.1/bin/irb:11:in `<main>'
+NameError: undefined local variable or method `e' for main:Object
+	from (irb):5
+	from /Users/vadim/.calabash/sandbox/Rubies/2.3.1/bin/irb:11:in `<main>'
+NameError: undefined local variable or method `q' for main:Object
+	from (irb):7
+	from /Users/vadim/.calabash/sandbox/Rubies/2.3.1/bin/irb:11:in `<main>'
+NameError: undefined local variable or method `asdkl' for main:Object
+	from (irb):8
+	from /Users/vadim/.calabash/sandbox/Rubies/2.3.1/bin/irb:11:in `<main>'

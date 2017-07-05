@@ -38,7 +38,49 @@
 		DD21FCD91EFF1E2500B10175 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DD21FCD81EFF1E2500B10175 /* 1.png */; };
 		DD21FCDC1F00739C00B10175 /* MapperUserVKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCDB1F00739C00B10175 /* MapperUserVKModel.m */; };
 		DD23DF371EF4508E009FF3C1 /* FinanceProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD23DF361EF4508E009FF3C1 /* FinanceProjectTests.m */; };
+		DD2E24BC1F0528290099BA88 /* GraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2E24B81F0528290099BA88 /* GraphicsViewController.m */; };
+		DD2E24BD1F0528290099BA88 /* DLPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2E24BB1F0528290099BA88 /* DLPieChart.m */; };
+		DD3694DC1F03C2D400B39927 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3694DB1F03C2D400B39927 /* Security.framework */; };
 		DD695E1A1EF5C27C002A8AD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD695E191EF5C27C002A8AD2 /* CoreData.framework */; };
+		DDEE7F371F0A6CDC0011D94B /* DLPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2E24BB1F0528290099BA88 /* DLPieChart.m */; };
+		DDEE7F381F0A6CDC0011D94B /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FC9E1EFF1D3500B10175 /* Transaction.m */; };
+		DDEE7F391F0A6CDC0011D94B /* PieChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFC01BA1F06CE0700F9928B /* PieChartCollectionViewCell.m */; };
+		DDEE7F3A1F0A6CDC0011D94B /* SectionForTransactionOfMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FC9C1EFF1D3500B10175 /* SectionForTransactionOfMonth.m */; };
+		DDEE7F3B1F0A6CDC0011D94B /* SearchVKFrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCBB1EFF1D3500B10175 /* SearchVKFrendsViewController.m */; };
+		DDEE7F3C1F0A6CDC0011D94B /* CustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FC971EFF1D3500B10175 /* CustomHeaderView.m */; };
+		DDEE7F3D1F0A6CDC0011D94B /* FinanceProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD21FC901EFF1D3500B10175 /* FinanceProject.xcdatamodeld */; };
+		DDEE7F3E1F0A6CDC0011D94B /* ManagerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCAE1EFF1D3500B10175 /* ManagerServer.m */; };
+		DDEE7F3F1F0A6CDC0011D94B /* VKDebtTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCB71EFF1D3500B10175 /* VKDebtTableViewCell.m */; };
+		DDEE7F401F0A6CDC0011D94B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCA91EFF1D3500B10175 /* ViewController.m */; };
+		DDEE7F411F0A6CDC0011D94B /* MapperUserVKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCDB1F00739C00B10175 /* MapperUserVKModel.m */; };
+		DDEE7F421F0A6CDC0011D94B /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCB11EFF1D3500B10175 /* AccessToken.m */; };
+		DDEE7F431F0A6CDC0011D94B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCB91EFF1D3500B10175 /* LoginViewController.m */; };
+		DDEE7F441F0A6CDC0011D94B /* GraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2E24B81F0528290099BA88 /* GraphicsViewController.m */; };
+		DDEE7F451F0A6CDC0011D94B /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCA31EFF1D3500B10175 /* TransactionTableViewCell.m */; };
+		DDEE7F461F0A6CDC0011D94B /* ComplexTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FC941EFF1D3500B10175 /* ComplexTransactionViewController.m */; };
+		DDEE7F471F0A6CDC0011D94B /* UserVKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCB31EFF1D3500B10175 /* UserVKModel.m */; };
+		DDEE7F481F0A6CDC0011D94B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FC891EFF1D3500B10175 /* AppDelegate.m */; };
+		DDEE7F491F0A6CDC0011D94B /* TableSpendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCA51EFF1D3500B10175 /* TableSpendingViewController.m */; };
+		DDEE7F4A1F0A6CDC0011D94B /* VKDebtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCBD1EFF1D3500B10175 /* VKDebtTableViewController.m */; };
+		DDEE7F4B1F0A6CDC0011D94B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCAB1EFF1D3500B10175 /* main.m */; };
+		DDEE7F4C1F0A6CDC0011D94B /* PieChartYearCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFC01C01F06EA0700F9928B /* PieChartYearCollectionViewCell.m */; };
+		DDEE7F4D1F0A6CDC0011D94B /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21FCA71EFF1D3500B10175 /* TransactionViewController.m */; };
+		DDEE7F4F1F0A6CDC0011D94B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFB07721F05108C009A6979 /* QuartzCore.framework */; };
+		DDEE7F501F0A6CDC0011D94B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3694DB1F03C2D400B39927 /* Security.framework */; };
+		DDEE7F511F0A6CDC0011D94B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD695E191EF5C27C002A8AD2 /* CoreData.framework */; };
+		DDEE7F521F0A6CDC0011D94B /* libPods-FinanceProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2625BDB6E1C7554DFFDF0D1F /* libPods-FinanceProject.a */; };
+		DDEE7F541F0A6CDC0011D94B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DD21FCD81EFF1E2500B10175 /* 1.png */; };
+		DDEE7F551F0A6CDC0011D94B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD21FCAA1EFF1D3500B10175 /* Info.plist */; };
+		DDEE7F561F0A6CDC0011D94B /* vk.png in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC9F1EFF1D3500B10175 /* vk.png */; };
+		DDEE7F571F0A6CDC0011D94B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC9A1EFF1D3500B10175 /* 2.png */; };
+		DDEE7F581F0A6CDC0011D94B /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC981EFF1D3500B10175 /* CustomHeaderView.xib */; };
+		DDEE7F591F0A6CDC0011D94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC8D1EFF1D3500B10175 /* Main.storyboard */; };
+		DDEE7F5A1F0A6CDC0011D94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC8A1EFF1D3500B10175 /* Assets.xcassets */; };
+		DDEE7F5B1F0A6CDC0011D94B /* ComplexTransaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC8F1EFF1D3500B10175 /* ComplexTransaction.storyboard */; };
+		DDEE7F5C1F0A6CDC0011D94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21FC8B1EFF1D3500B10175 /* LaunchScreen.storyboard */; };
+		DDFB07731F05108C009A6979 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFB07721F05108C009A6979 /* QuartzCore.framework */; };
+		DDFC01BB1F06CE0700F9928B /* PieChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFC01BA1F06CE0700F9928B /* PieChartCollectionViewCell.m */; };
+		DDFC01C11F06EA0700F9928B /* PieChartYearCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDFC01C01F06EA0700F9928B /* PieChartYearCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +149,19 @@
 		DD23DF321EF4508E009FF3C1 /* FinanceProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD23DF361EF4508E009FF3C1 /* FinanceProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinanceProjectTests.m; sourceTree = "<group>"; };
 		DD23DF381EF4508E009FF3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD2E24B71F0528290099BA88 /* GraphicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsViewController.h; sourceTree = "<group>"; };
+		DD2E24B81F0528290099BA88 /* GraphicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsViewController.m; sourceTree = "<group>"; };
+		DD2E24BA1F0528290099BA88 /* DLPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPieChart.h; sourceTree = "<group>"; };
+		DD2E24BB1F0528290099BA88 /* DLPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPieChart.m; sourceTree = "<group>"; };
+		DD3694DB1F03C2D400B39927 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DD695E191EF5C27C002A8AD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DDEE7F621F0A6CDC0011D94B /* FinanceProject-calabash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FinanceProject-calabash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDEE7F631F0A6CDD0011D94B /* FinanceProject copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FinanceProject copy-Info.plist"; path = "/Users/vadim/Documents/FinanceProject/FinanceProject copy-Info.plist"; sourceTree = "<absolute>"; };
+		DDFB07721F05108C009A6979 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DDFC01B91F06CE0700F9928B /* PieChartCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartCollectionViewCell.h; sourceTree = "<group>"; };
+		DDFC01BA1F06CE0700F9928B /* PieChartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartCollectionViewCell.m; sourceTree = "<group>"; };
+		DDFC01BF1F06EA0700F9928B /* PieChartYearCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartYearCollectionViewCell.h; sourceTree = "<group>"; };
+		DDFC01C01F06EA0700F9928B /* PieChartYearCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartYearCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +169,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDFB07731F05108C009A6979 /* QuartzCore.framework in Frameworks */,
+				DD3694DC1F03C2D400B39927 /* Security.framework in Frameworks */,
 				DD695E1A1EF5C27C002A8AD2 /* CoreData.framework in Frameworks */,
 				A8F5636FEE318259975D816A /* libPods-FinanceProject.a in Frameworks */,
 			);
@@ -125,6 +181,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20895992BDD854467D98EB1 /* libPods-FinanceProjectTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDEE7F4E1F0A6CDC0011D94B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDEE7F4F1F0A6CDC0011D94B /* QuartzCore.framework in Frameworks */,
+				DDEE7F501F0A6CDC0011D94B /* Security.framework in Frameworks */,
+				DDEE7F511F0A6CDC0011D94B /* CoreData.framework in Frameworks */,
+				DDEE7F521F0A6CDC0011D94B /* libPods-FinanceProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +212,7 @@
 		DD21FC871EFF1D3500B10175 /* FinanceProject */ = {
 			isa = PBXGroup;
 			children = (
+				DD2E24B61F0528290099BA88 /* Graphics */,
 				DD21FC921EFF1D3500B10175 /* FinanceTransaction */,
 				DD21FCAC1EFF1D3500B10175 /* VK */,
 				DD21FC881EFF1D3500B10175 /* AppDelegate.h */,
@@ -274,6 +342,7 @@
 				DD23DF171EF4508E009FF3C1 /* Products */,
 				DD695E181EF5C27C002A8AD2 /* Frameworks */,
 				80064E24F63F5A9F1A378040 /* Pods */,
+				DDEE7F631F0A6CDD0011D94B /* FinanceProject copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,6 +351,7 @@
 			children = (
 				DD23DF161EF4508E009FF3C1 /* FinanceProject.app */,
 				DD23DF321EF4508E009FF3C1 /* FinanceProjectTests.xctest */,
+				DDEE7F621F0A6CDC0011D94B /* FinanceProject-calabash.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,9 +365,34 @@
 			path = FinanceProjectTests;
 			sourceTree = "<group>";
 		};
+		DD2E24B61F0528290099BA88 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				DD2E24B71F0528290099BA88 /* GraphicsViewController.h */,
+				DD2E24B81F0528290099BA88 /* GraphicsViewController.m */,
+				DDFC01B91F06CE0700F9928B /* PieChartCollectionViewCell.h */,
+				DDFC01BA1F06CE0700F9928B /* PieChartCollectionViewCell.m */,
+				DDFC01BF1F06EA0700F9928B /* PieChartYearCollectionViewCell.h */,
+				DDFC01C01F06EA0700F9928B /* PieChartYearCollectionViewCell.m */,
+				DD2E24B91F0528290099BA88 /* Pie Chart Library */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		DD2E24B91F0528290099BA88 /* Pie Chart Library */ = {
+			isa = PBXGroup;
+			children = (
+				DD2E24BA1F0528290099BA88 /* DLPieChart.h */,
+				DD2E24BB1F0528290099BA88 /* DLPieChart.m */,
+			);
+			path = "Pie Chart Library";
+			sourceTree = "<group>";
+		};
 		DD695E181EF5C27C002A8AD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDFB07721F05108C009A6979 /* QuartzCore.framework */,
+				DD3694DB1F03C2D400B39927 /* Security.framework */,
 				DD695E191EF5C27C002A8AD2 /* CoreData.framework */,
 				2625BDB6E1C7554DFFDF0D1F /* libPods-FinanceProject.a */,
 				325AF4C0185ED0AEDFC58A7B /* libPods-FinanceProjectTests.a */,
@@ -349,6 +444,26 @@
 			productReference = DD23DF321EF4508E009FF3C1 /* FinanceProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DDEE7F341F0A6CDC0011D94B /* FinanceProject copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDEE7F5F1F0A6CDC0011D94B /* Build configuration list for PBXNativeTarget "FinanceProject copy" */;
+			buildPhases = (
+				DDEE7F351F0A6CDC0011D94B /* [CP] Check Pods Manifest.lock */,
+				DDEE7F361F0A6CDC0011D94B /* Sources */,
+				DDEE7F4E1F0A6CDC0011D94B /* Frameworks */,
+				DDEE7F531F0A6CDC0011D94B /* Resources */,
+				DDEE7F5D1F0A6CDC0011D94B /* [CP] Embed Pods Frameworks */,
+				DDEE7F5E1F0A6CDC0011D94B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FinanceProject copy";
+			productName = FinanceProject;
+			productReference = DDEE7F621F0A6CDC0011D94B /* FinanceProject-calabash.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,6 +499,7 @@
 			targets = (
 				DD23DF151EF4508E009FF3C1 /* FinanceProject */,
 				DD23DF311EF4508E009FF3C1 /* FinanceProjectTests */,
+				DDEE7F341F0A6CDC0011D94B /* FinanceProject copy */,
 			);
 		};
 /* End PBXProject section */
@@ -409,6 +525,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDEE7F531F0A6CDC0011D94B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDEE7F541F0A6CDC0011D94B /* 1.png in Resources */,
+				DDEE7F551F0A6CDC0011D94B /* Info.plist in Resources */,
+				DDEE7F561F0A6CDC0011D94B /* vk.png in Resources */,
+				DDEE7F571F0A6CDC0011D94B /* 2.png in Resources */,
+				DDEE7F581F0A6CDC0011D94B /* CustomHeaderView.xib in Resources */,
+				DDEE7F591F0A6CDC0011D94B /* Main.storyboard in Resources */,
+				DDEE7F5A1F0A6CDC0011D94B /* Assets.xcassets in Resources */,
+				DDEE7F5B1F0A6CDC0011D94B /* ComplexTransaction.storyboard in Resources */,
+				DDEE7F5C1F0A6CDC0011D94B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +622,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinanceProjectTests/Pods-FinanceProjectTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DDEE7F351F0A6CDC0011D94B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEE7F5D1F0A6CDC0011D94B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinanceProject/Pods-FinanceProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEE7F5E1F0A6CDC0011D94B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinanceProject/Pods-FinanceProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F1E81F15E67D90ECD48B5425 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,7 +689,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2E24BD1F0528290099BA88 /* DLPieChart.m in Sources */,
 				DD21FCC91EFF1D3500B10175 /* Transaction.m in Sources */,
+				DDFC01BB1F06CE0700F9928B /* PieChartCollectionViewCell.m in Sources */,
 				DD21FCC81EFF1D3500B10175 /* SectionForTransactionOfMonth.m in Sources */,
 				DD21FCD61EFF1D3500B10175 /* SearchVKFrendsViewController.m in Sources */,
 				DD21FCC51EFF1D3500B10175 /* CustomHeaderView.m in Sources */,
@@ -523,6 +702,7 @@
 				DD21FCDC1F00739C00B10175 /* MapperUserVKModel.m in Sources */,
 				DD21FCD21EFF1D3500B10175 /* AccessToken.m in Sources */,
 				DD21FCD51EFF1D3500B10175 /* LoginViewController.m in Sources */,
+				DD2E24BC1F0528290099BA88 /* GraphicsViewController.m in Sources */,
 				DD21FCCB1EFF1D3500B10175 /* TransactionTableViewCell.m in Sources */,
 				DD21FCC41EFF1D3500B10175 /* ComplexTransactionViewController.m in Sources */,
 				DD21FCD31EFF1D3500B10175 /* UserVKModel.m in Sources */,
@@ -530,6 +710,7 @@
 				DD21FCCC1EFF1D3500B10175 /* TableSpendingViewController.m in Sources */,
 				DD21FCD71EFF1D3500B10175 /* VKDebtTableViewController.m in Sources */,
 				DD21FCD01EFF1D3500B10175 /* main.m in Sources */,
+				DDFC01C11F06EA0700F9928B /* PieChartYearCollectionViewCell.m in Sources */,
 				DD21FCCD1EFF1D3500B10175 /* TransactionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +720,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD23DF371EF4508E009FF3C1 /* FinanceProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDEE7F361F0A6CDC0011D94B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDEE7F371F0A6CDC0011D94B /* DLPieChart.m in Sources */,
+				DDEE7F381F0A6CDC0011D94B /* Transaction.m in Sources */,
+				DDEE7F391F0A6CDC0011D94B /* PieChartCollectionViewCell.m in Sources */,
+				DDEE7F3A1F0A6CDC0011D94B /* SectionForTransactionOfMonth.m in Sources */,
+				DDEE7F3B1F0A6CDC0011D94B /* SearchVKFrendsViewController.m in Sources */,
+				DDEE7F3C1F0A6CDC0011D94B /* CustomHeaderView.m in Sources */,
+				DDEE7F3D1F0A6CDC0011D94B /* FinanceProject.xcdatamodeld in Sources */,
+				DDEE7F3E1F0A6CDC0011D94B /* ManagerServer.m in Sources */,
+				DDEE7F3F1F0A6CDC0011D94B /* VKDebtTableViewCell.m in Sources */,
+				DDEE7F401F0A6CDC0011D94B /* ViewController.m in Sources */,
+				DDEE7F411F0A6CDC0011D94B /* MapperUserVKModel.m in Sources */,
+				DDEE7F421F0A6CDC0011D94B /* AccessToken.m in Sources */,
+				DDEE7F431F0A6CDC0011D94B /* LoginViewController.m in Sources */,
+				DDEE7F441F0A6CDC0011D94B /* GraphicsViewController.m in Sources */,
+				DDEE7F451F0A6CDC0011D94B /* TransactionTableViewCell.m in Sources */,
+				DDEE7F461F0A6CDC0011D94B /* ComplexTransactionViewController.m in Sources */,
+				DDEE7F471F0A6CDC0011D94B /* UserVKModel.m in Sources */,
+				DDEE7F481F0A6CDC0011D94B /* AppDelegate.m in Sources */,
+				DDEE7F491F0A6CDC0011D94B /* TableSpendingViewController.m in Sources */,
+				DDEE7F4A1F0A6CDC0011D94B /* VKDebtTableViewController.m in Sources */,
+				DDEE7F4B1F0A6CDC0011D94B /* main.m in Sources */,
+				DDEE7F4C1F0A6CDC0011D94B /* PieChartYearCollectionViewCell.m in Sources */,
+				DDEE7F4D1F0A6CDC0011D94B /* TransactionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +813,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -648,6 +860,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -667,9 +880,47 @@
 			baseConfigurationReference = A74D3A0D416F71F1865FCC89 /* Pods-FinanceProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/PDKeychainBindingsController\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+				);
 				INFOPLIST_FILE = FinanceProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CorePlot\"",
+					"-l\"PDKeychainBindingsController\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-force_load",
+					"\"$(SOURCE_ROOT)/calabash.framework/calabash\"",
+					"-framework",
+					CFNetwork,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = CV.FinanceProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -680,6 +931,14 @@
 			baseConfigurationReference = 1E4285B4178CDD117782FF88 /* Pods-FinanceProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/PDKeychainBindingsController\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+				);
 				INFOPLIST_FILE = FinanceProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -714,6 +973,84 @@
 			};
 			name = Release;
 		};
+		DDEE7F601F0A6CDC0011D94B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A74D3A0D416F71F1865FCC89 /* Pods-FinanceProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/PDKeychainBindingsController\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+				);
+				INFOPLIST_FILE = "FinanceProject copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/calabash-ios-develop/calabash-cucumber/spec/resources",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CorePlot\"",
+					"-l\"PDKeychainBindingsController\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-force_load",
+					"\"$(SOURCE_ROOT)/calabash.framework/calabash\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CV.FinanceProject;
+				PRODUCT_NAME = "FinanceProject-calabash";
+			};
+			name = Debug;
+		};
+		DDEE7F611F0A6CDC0011D94B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E4285B4178CDD117782FF88 /* Pods-FinanceProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/PDKeychainBindingsController\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+				);
+				INFOPLIST_FILE = "FinanceProject copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/calabash-ios-develop/calabash-cucumber/spec/resources",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CV.FinanceProject;
+				PRODUCT_NAME = "FinanceProject-calabash";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -740,6 +1077,15 @@
 			buildConfigurations = (
 				DD23DF3F1EF4508E009FF3C1 /* Debug */,
 				DD23DF401EF4508E009FF3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDEE7F5F1F0A6CDC0011D94B /* Build configuration list for PBXNativeTarget "FinanceProject copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDEE7F601F0A6CDC0011D94B /* Debug */,
+				DDEE7F611F0A6CDC0011D94B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

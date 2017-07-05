@@ -14,18 +14,34 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CorePlot (2.0)
+  - PDKeychainBindingsController (0.0.1)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - CorePlot (from `https://github.com/core-plot/core-plot.git`, branch `release-2.0`)
+  - PDKeychainBindingsController
   - SDWebImage (~> 3.8)
+
+EXTERNAL SOURCES:
+  CorePlot:
+    :branch: release-2.0
+    :git: https://github.com/core-plot/core-plot.git
+
+CHECKOUT OPTIONS:
+  CorePlot:
+    :commit: c1f585d7cc89dcbdafe1e3966654a6c96f0fae0a
+    :git: https://github.com/core-plot/core-plot.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CorePlot: 18eb2e5fa6e56d53d0716203620580baba50f67c
+  PDKeychainBindingsController: fa8cb3cf99f2ea9240d61066ed0549f34e2cec3c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: bca8bc223c6af53c5dd0d91159724df05e9fcc45
+PODFILE CHECKSUM: 5af76924d32d323cd9ab04596702e2855d12f74c
 
 COCOAPODS: 1.2.1

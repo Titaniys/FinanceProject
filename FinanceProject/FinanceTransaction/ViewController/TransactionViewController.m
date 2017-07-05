@@ -20,7 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 
-@property (strong, nonatomic) NSArray *datePickerDataSource;
+@property (strong, nonatomic) NSArray *pickerDataSource;
+
 @property(copy, nonatomic) NSString *name;
 @property(assign, nonatomic) double summ;
 @property(copy, nonatomic) NSString *note;
@@ -36,31 +37,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpDelegates];
-    [self setDatePickerDataSource];
-    
-    
+    [self setpickerDataSource];
+    self.nameField.delegate = self;
+    self.summField.delegate = self;
 }
 
 #pragma mark - Configure
 
-- (void)setUpDelegates {
-    self.nameField.delegate = self;
-    self.summField.delegate = self;
-    
-}
 
 #pragma mark - Configure DatePicker
 
-- (void)setDatePickerDataSource {
+- (void)setpickerDataSource {
     
-    self.datePickerDataSource = [NSArray arrayWithObjects:
+    self.pickerDataSource = [NSArray arrayWithObjects:
                    @"Food",
-                   @"Сommunal payments",
+                   @"Сommunal",
                    @"Taxation",
                    @"Entertainment",
                    @"Credit",
-                   @"Another", nil];
+                   @"Another",
+                   @"-------",
+                   @"Salary",
+                   @"Dotation",
+                   @"Stipyha",
+                    nil];
 }
 
 - (void)viewDidUnload
@@ -77,21 +77,21 @@
 - (NSInteger)pickerView:(UIPickerView *)thePickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    return self.datePickerDataSource.count;
+    return self.pickerDataSource.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)thePickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
-    return [self.datePickerDataSource objectAtIndex:row];
+    return [self.pickerDataSource objectAtIndex:row];
 }
 
 #pragma mark UIPickerViewDelegate
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
    
-    self.selectedCategory = self.datePickerDataSource[row];
+    self.selectedCategory = self.pickerDataSource[row];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -101,10 +101,12 @@ numberOfRowsInComponent:(NSInteger)component
     if ([textField isEqual:self.nameField]) {
         [textField resignFirstResponder];
         self.name = textField.text;
-        [self.summField becomeFirstResponder];
+       [self.summField becomeFirstResponder];
+        
     } else {
         [textField resignFirstResponder];
         self.summ = [textField.text doubleValue];
+        
     }
     return YES;
 }
@@ -131,7 +133,7 @@ numberOfRowsInComponent:(NSInteger)component
     if (self.selectedCategory) {
         transaction.category = self.selectedCategory;
     } else {
-        transaction.category = self.datePickerDataSource[0];
+        transaction.category = self.pickerDataSource[0];
     }
     
     NSLog(@"%d",transaction.isSpending);
@@ -141,9 +143,6 @@ numberOfRowsInComponent:(NSInteger)component
     NSLog(@"%@",words);
     [appDelegate saveContext];
     [self showAlert];
-    TableSpendingViewController *vc = [TableSpendingViewController new];
-    
-    [self.navigationController pushViewController:vc animated:YES];
     }
 
 }
@@ -165,5 +164,9 @@ numberOfRowsInComponent:(NSInteger)component
 
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)didPinch:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

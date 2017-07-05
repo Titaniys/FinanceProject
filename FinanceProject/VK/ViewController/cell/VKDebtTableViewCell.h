@@ -13,7 +13,7 @@
 
 @interface VKDebtTableViewCell : UITableViewCell
 
-@property (weak, nonatomic)IBOutlet UIImageView *imageView;
+@property (strong, nonatomic)IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summ;
 
